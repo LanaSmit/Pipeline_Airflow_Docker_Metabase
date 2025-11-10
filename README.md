@@ -40,8 +40,11 @@ The system runs on Docker and is composed of several services that interact with
 4. Access the Applications
 
    Once everything is running, open the following in your browser:
+
    Airflow: http://localhost:8080
+
    pgAdmin: http://localhost:5050
+   
    Metabase: http://localhost:3000
 
    Use the credentials defined in your .env file to log in.
