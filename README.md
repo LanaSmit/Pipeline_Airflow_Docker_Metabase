@@ -21,10 +21,11 @@ The system runs on Docker and is composed of several services that interact with
 ## Setup Instructions
 
 1. Clone the Repository
+```bash   
    git clone https://github.com/LanaSmit/Pipeline_Airflow_Docker_Metabase.git
    cd weather-data-pipeline
-
-2. Configure Environment Variables
+```
+3. Configure Environment Variables
 
    Create your .env file
    Then open the .env file:
@@ -32,12 +33,13 @@ The system runs on Docker and is composed of several services that interact with
    Add your OpenWeather API key.
    You can obtain an API key by creating an account on the OpenWeather website
 
-3. Start the Services
+4. Start the Services
 
    Run the following command to build and start all containers:
-   docker compose up --build
-
-4. Access the Applications
+```bash
+docker compose up --build
+```
+5. Access the Applications
 
    Once everything is running, open the following in your browser:
 
@@ -49,7 +51,7 @@ The system runs on Docker and is composed of several services that interact with
 
    Use the credentials defined in your .env file to log in.
 
-5. Run and Explore
+6. Run and Explore
 
    Use Airflow to trigger and monitor your DAGs.
    Use pgAdmin to view and query your PostgreSQL database.
