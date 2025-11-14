@@ -37,7 +37,7 @@ The system runs on Docker and is composed of several services that interact with
 
    Run the following command to build and start all containers:
 ```bash
-docker compose up --build
+   docker compose up --build
 ```
 5. Access the Applications
 
