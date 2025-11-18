@@ -37,13 +37,13 @@ services:
       - postgres
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://lana:1234@postgres/weatherdb
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres/${POSTGRES_DB}
     ports:
       - "8080:8080"
     command: >
       bash -c "
       airflow db migrate &&
-      airflow users create --username admin --password admin --firstname Airflow --lastname Admin --role Admin --email admin@example.com &&
+      airflow users create --username ${AIRFLOW_USERNAME} --password ${AIRFLOW_PASSWORD} --firstname Airflow --lastname Admin --role Admin --email ${AIRFLOW_EMAIL} &&
       airflow webserver
       "
     networks:
@@ -64,4 +64,3 @@ volumes:
 
 networks:
   airflow_net:
-
