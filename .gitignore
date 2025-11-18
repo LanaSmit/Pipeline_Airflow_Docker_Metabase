@@ -12,6 +12,7 @@ airflow/logs/
 # Ignore database files
 *.db
 *.sqlite
+*Zone.Identifier
 
 # Ignore Docker volumes
 postgres_data/
